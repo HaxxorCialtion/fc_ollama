@@ -93,15 +93,33 @@ python main.py
 
 ## 📊 功能演示
 
-系统会输出详细的测试结果：
+输出示例：
+(qwen2.5:1.5b)
 ```
-🚀 第 1 次调用 API：
-⏱️ 耗时: 120.50 ms
+📋 已注册的工具:
+  1. play_music - 播放指定的歌曲
+  2. turn_on_lamp - 打开指定位置的台灯
+  3. set_air_conditioner_temperature - 设置某个房间的空调温度
+  4. make_phone_call - 拨打电话给指定联系人
+  5. sing_song - 以指定风格演唱一首歌曲
+
+✅ 工具定义与函数模块一致
+🚀 开始进行多次 API 调用测试...
+
+🔄 第 1 次调用:
+⏱️ 耗时: 21002.60 ms
 🔧 使用工具数量: 5
+📊 Token使用: 输入=521, 输出=156, 总计=677
 ✅ 函数 play_music 参数验证: 参数格式正确
-📋 参数详情: {"song_name": "晴天", "artist": "周杰伦"}
+   📋 参数详情: {'artist': '周杰伦', 'song_name': '晴天'}
 ✅ 函数 turn_on_lamp 参数验证: 参数格式正确
-📋 参数详情: {"location": "卧室"}
+   📋 参数详情: {'location': '卧室'}
+✅ 函数 set_air_conditioner_temperature 参数验证: 参数格式正确
+   📋 参数详情: {'room': '卧室', 'temperature': 26}
+✅ 函数 make_phone_call 参数验证: 参数格式正确
+   📋 参数详情: {'contact_name': '张三', 'phone_number': '13800138000'}
+✅ 函数 sing_song 参数验证: 参数格式正确
+   📋 参数详情: {'song_name': '本草纲目', 'style': '说唱'}
 ```
 
 ## 🎯 应用场景

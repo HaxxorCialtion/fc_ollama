@@ -241,7 +241,7 @@ def main():
         try:
             # 使用带 token 统计的方法
             response, usage = tracker.chat_with_tracking(
-                model="qwen2.5-coder:0.5b",
+                model="qwen2.5-coder:1.5b",
                 messages=messages,
                 tools=tools
             )
