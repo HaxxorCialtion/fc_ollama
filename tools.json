@@ -1,0 +1,117 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "play_music",
+      "description": "播放指定的歌曲",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "song_name": {
+            "type": "string",
+            "description": "歌曲名称"
+          },
+          "artist": {
+            "type": "string",
+            "description": "歌手或乐队名称"
+          }
+        },
+        "required": [
+          "song_name",
+          "artist"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "turn_on_lamp",
+      "description": "打开指定位置的台灯",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "location": {
+            "type": "string",
+            "description": "台灯所在的位置（如卧室、书房）"
+          }
+        },
+        "required": [
+          "location"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "set_air_conditioner_temperature",
+      "description": "设置某个房间的空调温度",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "room": {
+            "type": "string",
+            "description": "房间名称"
+          },
+          "temperature": {
+            "type": "number",
+            "description": "目标温度（单位：摄氏度）"
+          }
+        },
+        "required": [
+          "room",
+          "temperature"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "make_phone_call",
+      "description": "拨打电话给指定联系人",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "phone_number": {
+            "type": "string",
+            "description": "对方电话号码"
+          },
+          "contact_name": {
+            "type": "string",
+            "description": "联系人姓名"
+          }
+        },
+        "required": [
+          "phone_number",
+          "contact_name"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "sing_song",
+      "description": "以指定风格演唱一首歌曲",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "song_name": {
+            "type": "string",
+            "description": "歌曲名称"
+          },
+          "style": {
+            "type": "string",
+            "description": "演唱风格（如流行、摇滚、说唱）"
+          }
+        },
+        "required": [
+          "song_name",
+          "style"
+        ]
+      }
+    }
+  }
+]
