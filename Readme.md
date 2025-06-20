@@ -45,7 +45,7 @@ fc_ollama/
 
 ## 🔧 安装依赖
 ```bash
-pip install zhipuai jsonschema
+pip install ollama jsonschema
 ```
 
 ## 📖 使用指南
@@ -131,11 +131,10 @@ python main.py
 
 ## 🔮 未来规划
 
-- [ ] 支持更多LLM API接口
-- [ ] 添加Web界面管理工具
-- [ ] 集成测试报告生成
-- [ ] 支持工具调用链路追踪
-- [ ] 添加性能基准测试
+- [ ] 类"MCP"功能
+- [ ] 使用vLLM平替
+- [ ] 尝试更少参数规模的LLM
+- [ ] 考虑"大小LLM"结合规划
 
 ## 📄 许可证
 
