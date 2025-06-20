@@ -12,7 +12,7 @@
 - **可视化输出**：详细的控制台输出和统计信息
 
 ## 📁 项目结构
-
+```
 llm-tool-testing/
 ├── README.md # 项目说明文档
 ├── main.py # 主程序入口
@@ -22,7 +22,7 @@ llm-tool-testing/
 └── docs/
 ├── architecture.svg # 系统架构图
 └── workflow.svg # 工作流程图
-
+```
 
 ## 🛠️ 核心组件
 
@@ -47,55 +47,57 @@ llm-tool-testing/
 - 结果可视化输出
 
 ## 🔧 安装依赖
-
+```bash
 pip install zhipuai jsonschema
-
+```
 
 ## 📖 使用指南
 
 ### 基本使用
-
+```python
 from tool_manager import ToolManager
 
-初始化工具管理器
+# 初始化工具管理器
 tm = ToolManager()
 
-查看所有工具
+# 查看所有工具
 tm.print_summary()
 
-获取工具定义
+# 获取工具定义
 tools = tm.get_tools()
-
+```
 
 ### 添加新工具
 
+```python
 new_tool = {
-"type": "function",
-"function": {
-"name": "new_function",
-"description": "新功能描述",
-"parameters": {
-"type": "object",
-"properties": {
-"param1": {"type": "string", "description": "参数1"}
-},
-"required": ["param1"]
-}
-}
+    "type": "function",
+    "function": {
+        "name": "new_function",
+        "description": "新功能描述",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "param1": {"type": "string", "description": "参数1"}
+            },
+            "required": ["param1"]
+        }
+    }
 }
 
 tm.add_tool(new_tool)
+```
 
 
 ### 运行测试
-
+```bash
 python main.py
-
+```
 
 ## 📊 功能演示
 
 系统会输出详细的测试结果：
-
+```
 🚀 第 1 次调用 API：
 ⏱️ 耗时: 120.50 ms
 🔧 使用工具数量: 5
@@ -103,7 +105,7 @@ python main.py
 📋 参数详情: {"song_name": "晴天", "artist": "周杰伦"}
 ✅ 函数 turn_on_lamp 参数验证: 参数格式正确
 📋 参数详情: {"location": "卧室"}
-
+```
 
 ## 🎯 应用场景
 
@@ -127,4 +129,3 @@ MIT License
 ## 🤝 贡献
 
 欢迎提交Issue和Pull Request来改进这个项目！
-"""
