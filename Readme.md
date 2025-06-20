@@ -13,15 +13,12 @@
 
 ## 📁 项目结构
 ```
-llm-tool-testing/
+fc_ollama/
 ├── README.md # 项目说明文档
 ├── main.py # 主程序入口
 ├── tool_manager.py # 工具管理核心模块
 ├── functions.py # 函数定义模块
 ├── tools.json # 工具配置文件
-└── docs/
-├── architecture.svg # 系统架构图
-└── workflow.svg # 工作流程图
 ```
 
 ## 🛠️ 核心组件
