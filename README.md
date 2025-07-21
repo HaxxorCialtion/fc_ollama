@@ -40,3 +40,9 @@ VLLM_USE_V1=0 python api_server.py --model_dir /your/path/to/Index-TTS --port 11
 cd local_llm_fc
 python main_ollama.py
 ```
+### 效果示例
+![img.png](img.png)
+## 🙏 参考项目
+ - [index-TTS-vllm] https://github.com/Ksuriuri/index-tts-vllm
+ - [Ollama] https://github.com/ollama/ollama
+ - [Qwen3] https://github.com/QwenLM/Qwen3
