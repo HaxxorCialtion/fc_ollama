@@ -1,0 +1,112 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "list_available_music",
+      "description": "查看音乐目录中的所有音乐文件",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "stop_current_music",
+      "description": "停止pygame音乐播放",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "play_specific_music",
+      "description": "使用pygame播放音乐（修复时序问题）",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "music_name": {
+            "type": "string",
+            "description": "音乐名称"
+          }
+        },
+        "required": [
+          "music_name"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "adjust_volume_percentage",
+      "description": "根据百分比调整当前音量。参数为相对百分比：100.0=不变，110.0=增加10%，80.0=减少20%，0.0=静音，200.0=翻倍（但限制在100%内）。LLM应根据用户意图选择合适的百分比，如'大一点'可选择110-120，'小一点'可选择80-90，'静音'选择0，'最大'选择200等。",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "percentage": {
+            "type": "number",
+            "description": "音量调整百分比（相对于当前音量）。100.0表示不变，大于100增加，小于100减少，0表示静音"
+          }
+        },
+        "required": [
+          "percentage"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_current_volume_status",
+      "description": "获取当前音量状态信息",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "advanced_character_tts",
+      "description": "高性能多角色并发TTS。支持多个角色同时说话，不会互相打断。使用流水线处理，首段优化响应，其余段并行合成。",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string",
+            "description": "要转换为语音的文本内容，支持任意长度"
+          },
+          "character": {
+            "type": "string",
+            "description": "角色名称，如纳西妲、甘雨、萝莎莉亚、水月、莉莉娅等",
+            "default": "纳西妲"
+          }
+        },
+        "required": [
+          "text"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "stop_all_advanced_tts",
+      "description": "停止所有正在播放的TTS音频",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  }
+]
